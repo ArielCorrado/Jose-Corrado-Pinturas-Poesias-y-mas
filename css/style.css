@@ -1,0 +1,545 @@
+/********************************************************** index.html **********************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Josefin+Sans:wght@100;200;300&family=Niconne&family=PT+Sans+Narrow&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(31, 31, 31, 1);
+    position: relative;
+}
+
+main {
+    padding: 100px 0 165px 0;
+}
+
+.animationScaleY {
+    text-align: center;
+    width: 100%;
+}
+
+.menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.795);
+    z-index: 150;
+    display: grid;
+    grid-template-columns: repeat(8, max-content);
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.menu__botones {  transition-property: all;
+    transition-duration: 0.75s;
+    padding: 0 2vw;
+}
+
+.menu__botones:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    cursor: pointer;
+}
+
+#cancel_icon {
+    height:30px; 
+    position:absolute; 
+    right:10px; 
+    top:0; 
+    bottom:0; 
+    margin:auto; 
+    cursor:pointer;
+}
+
+.encabezado {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado__back {
+    width: 100%;
+    height: 100%;
+    /*border-bottom: 5px solid #6f1d1b;*/
+    object-fit: cover;
+    filter: contrast(80%) brightness(80%) grayscale(40%);
+    position: absolute;
+}
+
+.encabezaodo__back--poesias {
+    object-position: 0 30%;
+}
+
+.titulos {
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    margin: 50px 10px 0 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.subtitulos {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-style: oblique;
+    margin: 10px; 
+}
+
+.titleLine {
+    max-width: 80%;
+    filter: invert(25%);
+}
+
+.jose {
+    position: absolute;
+    color: #b43e3c;
+    font-family: 'Cormorant SC', serif;
+    font-weight: lighter;
+    font-size: 50px;
+    top: 60px;
+    left: 30px;
+    z-index: 50;
+}
+
+.corrado {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Cormorant SC', serif;
+    font-weight: lighter;
+    font-size: 70px;
+    left: 60px;
+    top: 90px;
+    z-index: 50;
+}
+
+/*************************************************************** Cuadros *******************************************************************/
+
+.gridCuadros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 300px);
+    grid-auto-rows:  300px;
+    grid-auto-columns: 300px;
+    grid-gap: 30px;
+    grid-auto-flow: dense;
+    justify-content: center;
+}
+
+.contCuadros {
+    grid-column: span 1;
+    grid-row: span 1;
+    border: 2px solid rgb(177, 177, 177);
+    
+}
+
+.cuadros {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 0.5s;
+    transition-property: all;
+    /*filter: brightness(150%);*/
+    /*filter: contrast(150%);*/
+}
+
+.contCuadros:hover .cuadros{
+    transform: scale(110%);
+}
+
+.contCuadros:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.contCuadros:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.contCuadros:last-child {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+
+@media only screen and (max-width: 350px) {
+    .gridCuadros {
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-auto-columns: 250px;
+    }    
+}
+
+
+@media only screen and (max-width: 750px)  {
+
+    .contCuadros:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .contCuadros:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .contCuadros:last-child {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+
+/*************************************************************** Poesias ********************************************************************/
+
+.imgPoesias {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.imgPoesias:hover {
+    transform: scale(110%);
+}
+
+.poesias__contenedorFlex {
+    margin: 25px 0;
+}
+
+.poesias__contenedor {
+    flex-direction: row;
+    width: 95%;
+    background-color: rgb(42, 44, 51);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.poesias__contendorImg {
+    width: 45%;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+.poesias__contenedorTexto {
+    color: white;
+    text-align: center;
+    padding: 3vw;   
+    flex-direction: column;
+    width: 55%;
+    height: 300px;
+}
+
+.poesias__contenedorTexto span {         /*Poesias Titulo*/
+    color: #cf9a4a;
+    font-size: 45px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.poesias__contenedorTexto p {           /*Poesias parrafo*/
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+@media only screen and (max-width: 900px) {
+    .poesias__contenedor {
+        flex-direction: column;
+    }
+
+    .poesias__contendorImg {
+        width: 100%;
+    }
+
+    .poesias__contenedorTexto {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    
+    .poesias__contenedorTexto span{
+        font-size: 25px;    
+    }
+
+    .poesias__contenedorTexto p{
+        font-size: 20px;    
+    }
+}
+
+/******************************************************************* Footer ******************************************************************/
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    height: 100%;
+}
+
+.footer img {
+    height: 70%;
+    filter: invert();
+    margin: 3.5vw;
+}
+
+
+/*********************************************************Responsive Index.html*************************************************************/
+/* Responsive Logo Jose Corrado */
+
+@media only screen and (max-width: 1400px) {
+    .jose {
+        font-size: 40px;
+        left: 10px;
+    }
+
+    .corrado {
+        font-size: 50px;
+        top: 85px;
+        left: 30px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .jose {
+        font-size: 40px;
+        top: 0;
+    }
+
+    .corrado {
+        font-size: 50px;
+        top: 25px;
+        left: 30px;
+    }
+}
+
+
+/* Responsive encabezado */
+
+@media only screen and (max-width: 500px) {
+    .titulos {
+        font-size: 50px;
+        
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .encabezado {
+        display: flex;
+        align-items: end;
+    }
+}
+
+
+/* Responsive Menu */
+
+@media only screen and (max-width: 999px) {
+    .menu{    
+        height: fit-content;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(8,40px);
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    #cancel_icon {
+        margin: unset;
+        top: 10px;
+    }
+}
+
+
+/******************************************************************* Poesias páginas *********************************************************/
+
+.poesias_main {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(42, 44, 51)
+}
+
+.light {
+    color: rgb(27, 29, 41);
+    background-color: rgb(214, 214, 214);
+}
+
+.poesias_titulo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    color: #cf9a4a;
+    text-transform: uppercase;
+}
+
+.poesias_titleLine {
+    filter: invert(25%);
+    max-width: 80%;
+}
+
+.poesias_texto {
+    font-size: 30px;
+    font-style: oblique;
+}    
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.poesias_pie {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.poesias_imagen {
+    margin-top: 100px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .poesias_titulo {
+        font-size: 35px;
+    }
+
+    .poesias_texto {
+        font-size: 25px;
+    }
+
+    .poesias_pie {
+        font-size: 20px;
+    }
+
+}
+
+
+/********************************************************Formulario de contacto**************************************************************/
+
+.enviado {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: rgb(42, 44, 51);
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.formulario_body {
+    background-color: rgb(42, 44, 51)
+}
+
+.formulario_main {
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.formulario_titulo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    /*color:  #d6d6d6;*/
+    font-weight: bold;
+    color: #cf9a4a;
+    text-align: center;
+    margin-bottom: 25px;
+
+}    
+
+.form {
+    width: 700px;           
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+    max-height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.input:focus {
+    outline: 1px solid #cf4d4a;
+    
+}
+
+.formulario_boton {
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 50%;
+    height: 60px;
+    color: white;
+    background-color: #cf4d4a;
+    cursor: pointer;
+}
+
+.formulario_boton:hover {
+    background-color: #ce3836;
+}
+
+.textarea {
+    max-height: 250px;
+    resize: none;
+}
+
+@media only screen and (max-width:700px) {
+
+    .form {
+        width: 95%;
+    }
+
+    .formulario_titulo {
+        font-size: 30px;
+    }
+
+    .input {
+        font-size: 20px;
+    }
+}
+

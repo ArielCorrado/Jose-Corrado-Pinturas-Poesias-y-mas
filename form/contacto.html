@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mensaje Enviado</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="formulario_body">
+        <header>
+            <nav>    
+                <div class="menu" id="menu">
+                    <img id="cancel_icon" src="../images/close.png" alt="">
+                    <a href="../index.html" class="flex menu__botones">HOME</a>
+                    <a href="#" class="flex menu__botones">LIBROS</a>
+                    <a href="../poesias/poesias.html" class="flex menu__botones">POESIAS</a>
+                    <a href="../cuadros/cuadros.html" class="flex menu__botones">CUADROS</a>
+                    <a href="#" class="flex menu__botones">ARQUITECTURA</a>
+                    <a href="#" class="flex menu__botones">TIENDA</a>
+                    <a href="#" class="flex menu__botones">SOMRE MI</a>
+                    <a href="contacto.html" class="flex menu__botones">CONTACTO</a>
+                </div>
+            </nav> 
+        </header>
+    
+        <main class="formulario_main flex">
+                        
+            <form class="flex form" action="contacto.php" method="POST" accept-charset="UTF-8">
+                <h1 class="formulario_titulo">FORMULARIO DE CONTACTO</h1>
+                <input class="input" type="text" name="name" placeholder="Nombre"> 
+                <textarea class="input textarea" name="msg" placeholder="Mensaje" cols="50" rows="15"></textarea>
+                <input class="input" type="email" name="email" placeholder="E-Mail">
+                <input class="input formulario_boton" type="submit" name="enviar" value="ENVIAR">
+
+            </form>
+
+        </main>
+
+        <footer>
+            <div class="footer">
+                <a class="flex" href="https://www.facebook.com/poesiajosecorrado" target="_blank"><img src="../images/Logo_Facebook.png" alt=""></a>
+                <img src="../images/Logo_Instagram.png" alt="">
+                <img src="../images/Logo_TW.png" alt="">
+                <img src="../images/Logo_WS.png" alt="">
+            </div>
+        </footer>
+    
+        <script src="../js/ruta_images.js"></script>
+        <script src="../js/menu.js"></script>
+    </body>
+</html>
