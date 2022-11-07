@@ -10,11 +10,11 @@ var alturaMenu = 50;            //Variable que va a almacenar la altura del men�
 
 var vistaDesktop = true;        //Carga de Pagina desktop
 
-if (window.innerWidth < 1000) {                                         //Carga de página mobile. Si cargamos la página en mobile (width<1000px) cerramos menu
+if (window.innerWidth < 1200) {                                         //Carga de página mobile. Si cargamos la página en mobile (width<1200px) cerramos menu
     document.getElementById("menu").style.display = "none";             //Menu cerrado  
     document.getElementById("menu_icon").style.display = "block"
     document.getElementById("cancel_icon").style.display = "none";
-    vistaDesktop = false;           //Si esta en false indica que estamos en version mobile (width<1000px)
+    vistaDesktop = false;           //Si esta en false indica que estamos en version mobile (width<1200px)
 }
 
 document.getElementById("menu_icon").addEventListener("click", abrir_menu);         //Agregamos "escuchadores" de eventos
@@ -22,14 +22,14 @@ document.getElementById("cancel_icon").addEventListener("click", cerrar_menu);  
 window.addEventListener("resize", resize);
 
 function resize () {                                    
-    if ((window.innerWidth < 1000) && (vistaDesktop)) {            //Si hacemos un Resize del viewport y pasamo de desktop a movile...
+    if ((window.innerWidth < 1200) && (vistaDesktop)) {            //Si hacemos un Resize del viewport y pasamo de desktop a movile...
         document.getElementById("menu").style.display = "none";     //Menu Cerrado
         document.getElementById("menu_icon").style.display = "block";
         document.getElementById("cancel_icon").style.display = "none";
-        vistaDesktop = false;           //pasamos indicador a false indicando que estmos en version mobile (width<1000px)
+        vistaDesktop = false;           //pasamos indicador a false indicando que estmos en version mobile (width<1200px)
     }
 
-    if ((window.innerWidth >= 1000) && (!vistaDesktop)) {           //Resize de movile a desktop
+    if ((window.innerWidth >= 1200) && (!vistaDesktop)) {           //Resize de movile a desktop
         abrir_menu();
         vistaDesktop = true;                //Indicador en true "estamos en desktop"
     }    
