@@ -31,13 +31,20 @@
     
         <main class="formulario_main flex">
                         
-            <form class="flex form" action="contacto.php" method="POST" accept-charset="UTF-8">
+            <form class="flex form" action="contacto.php" method="POST" accept-charset="UTF-8" id="form">
                 <h1 class="formulario_titulo">FORMULARIO DE CONTACTO</h1>
                 <input class="input" type="text" name="name" placeholder="Nombre"> 
                 <textarea class="input textarea" name="msg" placeholder="Mensaje" cols="50" rows="15"></textarea>
                 <input class="input" type="email" name="email" placeholder="E-Mail">
-                <input class="input formulario_boton" type="submit" name="enviar" value="ENVIAR">
-
+                <!-- <input class="input formulario_boton" type="submit" name="enviar" value="ENVIAR"> -->
+                <!-- Código google reCaptcha-->
+                <button class="input formulario_boton g-recaptcha" 
+                        data-sitekey="6LdcL9oiAAAAADDr17vJ-PQf-G_AOiB-0DwXKEpC" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>
+                        Enviar
+                </button>
+                <!---------------------------->
             </form>
 
         </main>
@@ -49,8 +56,15 @@
                 <img src="../images/Logo_TW.png" alt="">
                 <img src="../images/Logo_WS.png" alt="">
             </div>
-        </footer>
-    
+        </footer>   
+        <!-- Código google reCaptcha-->
+        <script>
+            function onSubmit(token) {
+              document.getElementById("form").submit();
+            }
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- -------------------- -->
         <script src="../js/ruta_images.js"></script>
         <script src="../js/menu.js"></script>
     </body>
