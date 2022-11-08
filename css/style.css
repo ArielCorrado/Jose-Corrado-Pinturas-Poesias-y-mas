@@ -105,6 +105,10 @@ main {
     object-position: 0 30%;
 }
 
+.encabezaodo__back--videos {
+    filter: contrast(75%) saturate(150%);
+}
+
 .titulos {
     color: rgb(255, 255, 255);
     font-size: 90px;
@@ -124,6 +128,10 @@ main {
 .titleLine {
     max-width: 80%;
     filter: invert(25%);
+}
+
+.titleline--videos {
+    filter: invert(75%);
 }
 
 .jose {
@@ -524,6 +532,7 @@ main {
 }
 
 .formulario_boton {
+    margin-top: 25px;
     border-radius: 10px;
     border: none;
     width: 50%;
@@ -599,6 +608,7 @@ main {
 .libros_img_abu {
     max-width: 300px;
     margin: 0 20px 50px 20px;
+    border: 10px solid rgba(65, 65, 65, 0.795);
 }
 
 .libros_texto {
@@ -621,6 +631,12 @@ main {
     filter: invert(50%);
     max-width: 600px;
     margin: 50px 0 150px 0;
+}
+
+.libros_logo_ml {
+    margin-bottom: 100px;
+    width: 290px;
+    max-width: 80vw;
 }
 
 @media only screen and (max-width: 650px) {
@@ -651,4 +667,17 @@ main {
         width: 95%;
         margin: 50px 0;
     }
+}
+
+
+/***************************************************** Tienda **********************************************************************/
+
+.libros_img_abu {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.libros_img_abu:hover {
+    transform: scale(110%) !important;
+    filter: saturate(125%) brightness(125%);
 }

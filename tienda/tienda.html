@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos</title>
+    <title>Libros</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +20,8 @@
                 <a href="../libros/libros.html" class="flex menu__botones">LIBROS</a>
                 <a href="../poesias/poesias.html" class="flex menu__botones">POESIAS</a>
                 <a href="../cuadros/cuadros.html" class="flex menu__botones">CUADROS</a>
-                <a href="videos.html" class="flex menu__botones">VIDEOS</a>
-                <a href="../tienda/tienda.html" class="flex menu__botones">TIENDA</a>
+                <a href="../videos/videos.html" class="flex menu__botones">VIDEOS</a>
+                <a href="tienda.html" class="flex menu__botones">TIENDA</a>
                 <a href="../sobre_mi/sobre_mi.html" class="flex menu__botones">SOMRE MI</a>
                 <a href="../form/contacto.html" class="flex menu__botones">CONTACTO</a>
             </div>
@@ -29,25 +30,45 @@
         <div class="encabezado">
             <h4 class="jose">José</h4>
             <h4 class="corrado">Corrado</h4>
-            <img class="encabezado__back encabezaodo__back--videos" id="encabezado__back" src="../images/camara.jpg" alt="">
+            <img class="encabezado__back encabezaodo__back--poesias" id="encabezado__back" src="../images/libros/libro.jpeg" alt="">
             <div class="animationScaleY" animate="off"> 
-                <h2 class="titulos"> MIS VIDEOS </h2>
-                <p class="subtitulos">Videos de Poesías Recitadas</p>
-                <img class="titleLine titleline--videos" src="../images/title-line.png" alt="">
+                <h2 class="titulos"> MI TIENDA </h2>
+                <p class="subtitulos">Algunos de Mis Libros </p>
+                <img class="titleLine" src="../images/title-line.png" alt="">
             </div>
         </div>
 
     </header>
 
-    <main class="enviado flex column">
-        <div class="flex wrap videos_cont">
-            <iframe class="videos"  width="560" height="315" src="https://www.youtube.com/embed/S3LeXkEivpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/XrGQbJ0Bd_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main class="enviado flex wrap column main_libros">
+        <div class="flex column">
+            <h2 class="libros_titulo">Amor al Amor (Poesía)</h2>                
+            <img src="../images/libros/amor_al_amor.jpg" alt="" class="libros_img_abu AoS">   
+        <div>
+
+        <div>
+            <a class="flex column" href="https://articulo.mercadolibre.com.ar/MLA-1217336762-libro-pasion-por-la-pasion-jose-corrado-_JM" target="_blank">
+                <h2 class="sobre_mi_titulo">Pasión por la Pasión (Poesía)</h2>
+                <img src="../images/libros/pasion_por_la pasion2.jpg" alt="" class="libros_img_abu AoS">
+            </a>    
         </div>
-        <div class="flex wrap videos_cont">
-            <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/vU_ll2D_8ms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/482Kr87afSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+
+        <div>
+            <a class="flex column" href="https://articulo.mercadolibre.com.ar/MLA-1217388546-libro-sembrador-jose-corrado-_JM" target="_blank">
+                <h2 class="sobre_mi_titulo">Sembrador (Poesía)</h2>
+                <img src="../images/libros/sembrador_grande.jpg" alt="" class="libros_img_abu AoS">
+            </a>
+        </div>       
+
+        <div>
+            <a class="flex column" href="https://articulo.mercadolibre.com.ar/MLA-1217388577-libro-panuelos-negros-panuelos-blancos-jose-corrado-_JM" target="_blank">
+                <h2 class="sobre_mi_titulo">Pañuelos Negros, Pañuelos Blancos (Novela)</h2>
+                <img src="../images/libros/panuelos.jpg" alt="" class="libros_img_abu AoS">
+            </a>
+        </div>   
+
+        <a href="https://listado.mercadolibre.com.ar/_CustId_790809377" target="_blank"><img class="libros_logo_ml" src="../images/logo_ml.png" alt=""></a>
+
     </main>
 
     <footer>
@@ -59,6 +80,7 @@
         </div>
     </footer>
     
+    <script src="../js/AoS.js"></script>
     <script src="../js/animation.js"></script>
     <script src="../js/ruta_images.js"></script>
     <script src="../js/menu.js"></script>
