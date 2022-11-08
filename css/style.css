@@ -23,6 +23,14 @@ a:visited {
     align-items: center;
 }
 
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 body {
     background-color: rgba(31, 31, 31, 1);
     position: relative;
@@ -41,7 +49,6 @@ main {
     position: fixed;
     z-index: 100;
     top: 0;
-        /* min-height: 60px; */
     width: 100%;
     background-color: rgba(56, 56, 56, 0.795);
     z-index: 150;
@@ -51,14 +58,13 @@ main {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bolder;
     justify-content: center;
-        font-size: 22px;
+    font-size: 22px;
 }
 
 .menu__botones {  transition-property: all;
     transition-duration: 0.75s;
-        padding: 0 2vw;
-        min-height: 60px;
-        
+    padding: 0 2vw;
+    min-height: 60px;
 }
 
 .menu__botones:hover {
@@ -380,7 +386,7 @@ main {
     .menu{    
         height: fit-content;
         grid-template-columns: unset;
-            grid-template-rows: repeat(8,fit-content);
+        grid-template-rows: repeat(8,fit-content);
         background-color: rgba(0, 0, 0, 0.9);
     }
 
@@ -547,3 +553,66 @@ main {
     }
 }
 
+
+/*************************************************************** Sobre mi *****************************************************************/
+
+.sobre_mi_titulo {
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.sobre_mi_img {
+    margin-bottom: 100px;
+}
+
+.sobre_mi_texto {
+    margin: 0 10vw;
+}
+
+
+/***************************************************************** Libros ***************************************************************/
+
+.libros_img {
+    width: 145px;
+    height: 208px;
+    margin-bottom: 50px;
+}
+
+.libros_img_abu {
+    max-width: 300px;
+    margin: 0 20px 50px 20px;
+}
+
+.libros_texto {
+    font-style: oblique;
+    font-size: 25px;
+    max-width: 600px;
+    margin: 0 20px 0 20px; 
+}
+
+.main_libros {
+    padding: 150px 0 50px 0;
+}
+
+.libros_titulo {
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.libros_linea {
+    filter: invert(50%);
+    max-width: 600px;
+    margin: 50px 0 150px 0;
+}
+
+@media only screen and (max-width: 650px) {
+    .libros_linea {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .libros_img_abu {
+        width: 90%;
+    }
+}
