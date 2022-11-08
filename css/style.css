@@ -322,6 +322,11 @@ main {
     width: 100%;
 }
 
+.footer div {
+    height: 100%;
+    margin: 3.5vw;
+}
+
 .footer a {
     height: 100%;
 }
@@ -329,7 +334,6 @@ main {
 .footer img {
     height: 70%;
     filter: invert();
-    margin: 3.5vw;
 }
 
 
@@ -521,7 +525,7 @@ main {
 
 .formulario_boton {
     border-radius: 10px;
-    border: 2px solid black;
+    border: none;
     width: 50%;
     height: 60px;
     color: white;
@@ -558,15 +562,29 @@ main {
 
 .sobre_mi_titulo {
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    padding-top: 50px;
 }
 
 .sobre_mi_img {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    border: 10px double rgba(56, 56, 56, 0.795);
 }
 
 .sobre_mi_texto {
-    margin: 0 10vw;
+    margin: 0 10vw 50px 10vw;
+}
+
+.lista_libros li{
+    text-align: left;
+    margin: 0 20px 20px 30px;
+}
+
+.sobre_mi_titulo_libros {
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 75px;
+    margin-bottom: 50px;
 }
 
 
@@ -585,8 +603,8 @@ main {
 
 .libros_texto {
     font-style: oblique;
-    font-size: 25px;
-    max-width: 600px;
+    font-size: 24px;
+    max-width: 800px;
     margin: 0 20px 0 20px; 
 }
 
@@ -614,5 +632,23 @@ main {
 @media only screen and (max-width: 350px) {
     .libros_img_abu {
         width: 90%;
+    }
+}
+
+
+/****************************************************** Videos ********************************************************************/
+
+.videos {
+    margin: 50px;
+}
+
+.videos_cont {
+    width: fit-content;
+}
+
+@media only screen and (max-width: 700px) {
+    .videos {
+        width: 95%;
+        margin: 50px 0;
     }
 }
